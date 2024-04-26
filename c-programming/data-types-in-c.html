@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types in C - Progera.com</title>
+    <!---Importing Stylsheets-->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!---IMPORTING GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Benne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ceviche+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <!---IMPORTING FONTAWESOME ICONS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!--Bootstrap JS-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!--Navigation Start-->
+    <header>
+        <nav id="header-nav" class="navbar navbar-expand-lg navbar-light sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <h1>ProgEra</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                  <div id="navitems" class="navbar-nav">
+                    <a class="nav-item nav-link" href="../c-programming.html">C Program</a>
+                    <a class="nav-item nav-link" href="../java-programming.html">Java</a>
+                    <a class="nav-item nav-link" href="../python-programming.html">Python</a>
+                    <a class="nav-item nav-link" href="../html.html">HTML</a>
+                    <a class="nav-item nav-link" href="../css.html">CSS</a>
+                    <a class="nav-item nav-link" href="../javascript.html">JavaScript</a>
+                    <a class="nav-item nav-link" href="../php.html">Php</a>
+                    <a class="nav-item nav-link" href="../my-sql.html">My SQL</a>
+                    <a class="nav-item nav-link" href="../web-apps.html">Web Apps</a>
+                  </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div id="contents">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="c-nav">
+                        <h3>Quick Navigation</h3>
+                        <a href="../c-programming.html#c-basics"><i class="fas fa-angle-double-right"></i> C-Basics</a>
+                        <a href="../c-programming.html#operators"><i class="fas fa-angle-double-right"></i> Operators</a>
+                        <a href="../c-programming.html#conditional-statements"><i class="fas fa-angle-double-right"></i> Conditional Statements</a>
+                        <a href="../c-programming.html#loops"><i class="fas fa-angle-double-right"></i> Loops</a>
+                        <a href="../c-programming.html#arrays"><i class="fas fa-angle-double-right"></i> Arrays</a>
+                        <a href="../c-programming.html#pointers"><i class="fas fa-angle-double-right"></i> Pointers</a>
+                        <a href="../c-programming.html#structures"><i class="fas fa-angle-double-right"></i> Structures and Unions</a>
+                        <a href="../c-programming.html#functions"><i class="fas fa-angle-double-right"></i> Functions and Recursion</a>
+                        <a href="../c-programming.html#file-handling"><i class="fas fa-angle-double-right"></i> File Handling</a>
+                    </div>
+                </div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-8 col-md-6 col-sm-12">
+                    <h3>Data Types in C</h3>
+                    <p class="para-contents">Data type in any programming language is an attribute
+                        which tells complier how interpret the value. C programming language has 
+                        varieties of data type.
+                    </p>
+                    <p class="para-content">Some common data types used in C are:</p>
+                    <b class="b-head">1. integer (int)</b></li>
+                        <p class="para-contents">It is the most common data type used in C. It is used to store
+                            numbers without fractional values. The numbers can be either negative, zero or positive.
+                            It can store 4 bytes or 32 bits value. So integers 
+                            from -2147483647 through 2147483647 (2<sup>32</sup>) can be stored. 
+                            <b>%d</b> and <b>%i </b>are the format specifier for integer data type.
+                        </p>
+                        <div class="code-area">
+                        <code class="codes">
+                            <span class="var-type">int</span> a;
+                        </code>
+                        </div>
+                        <p class="para-contents">Here, variable <i>a</i> is of type int.</p>
+                        <p class="para-contents">You can declare multiple variables of type int at an
+                            instance. The variables are seperated by a comma and terminated by a semi-colon.
+                        </p>
+                        <div class="code-area">
+                            <code class="codes">
+                                <span class="var-type">int</span> roll, age;
+                            </code>
+                            </div>
+                        
+                        <b class="b-head">2. float and double</b>
+                        <p class="para-contents">float and double are used to store real numbers or simply 
+                           the numbers with decimal points or fractional values.</p>
+
+                        <p class="para-contents"><strong><i>What is the major difference between float and double?</i></strong> <br>
+                            Float has 6 digits of precision which means that it 
+                            can hold 6 digits after decimal and truncate rest of the bits.
+                            For example, float can hold 10.456231 <br>
+                            Double has 15 digits of precision which means that it can hold upto 15 digits
+                            after decimal and truncate rest of the bits. For example, float can hold 10.456231671234501 <br>
+                            <b>%f</b> is the format specifier for float data type and <b>%d </b>is the format specifier for 
+                            double data type.
+                        </p>
+                        <div class="code-area">
+                        <code class="codes">
+                            <span class="var-type">float</span> a; <br>
+                            <span class="var-type">double</span> x;
+                        </code>
+                        </div>
+                        <p class="para-contents">Here, variable <i>a</i> is of type float and variable <i>x</i> is of type 
+                            double.</p>
+                        <b class="b-head">3. char</b>
+                        <p class="para-contents">char holds single bit of character in c programming language.
+                        <b>%c</b> is the format specifier for float data type. For example: a, 1, *, etc.</p>
+                        <div class="code-area">
+                                <code class="codes">
+                                    <span class="var-type">char</span> a;
+                                </code>
+                        </div>
+                        <p class="para-contents">Here, variable <i>a</i> is of type char.</p>
+                    
+                        <b class="b-head">4. void</b>
+                        <p class="para-contents">Void holds no value or it is null data type. It is generally used
+                            to define a function that returns no value.
+                        </p>
+                        <div class="code-area">
+                            <code class="codes">
+                               <span class="var-type">void</span> func();
+                            </code>
+                        </div>
+                        <p class="para-contents">Here, function <i>func()</i> doesn't return value.</p>
+                        <hr color="grey">
+                        <div class="btn-foot">
+                            <button class="btn-prev"><a href="first c program.html">Previous</a></button>
+                            <button class="btn-next"><a href="constant-and-variables.html">Next</a></button>
+                        </div>
+                        <!--Recommendation Section Here-->
+                        <div class="social-share">
+                            <h4>Share with friends :</h4>
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.progera.com/c-programming/data-types-in-c.html" 
+                            target="_blank" title="Share on Facebook"><i class="fa-brands fa-facebook-square"></i></a>
+                            <a href="https://twitter.com/intent/tweet?url=https://www.progera.com/c-programming/data-types-in-c.html" 
+                            target="_blank" title="Share on Twitter"><i class="fa-brands fa-twitter-square"></i></a>
+                            <a href="https://twitter.com/intent/tweet?url=https://www.progera.com/c-programming/data-types-in-c.html" 
+                            target="_blank" title="Share on Linkedin"><i class="fa-brands fa-linkedin"></i></a>
+                            <button class="copy-btn" title="Copy to Clipboard " onclick="copy_func();">
+                            <i class="fa-regular fa-copy"></i>
+                            </button>
+                            <p id="success-msg"></p>
+                        </div>
+                </div>
+            </div>
+        </div>
+    <div id="footer">
+        <p class="copyright">Copyright © 2022, Progera.com | All Right Reserved</p>
+    </div>
+	<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+		<script>
+		mybutton = document.getElementById("myBtn");
+
+		window.onscroll = function() {scrollFunction()};
+
+		function scrollFunction() {
+		  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			mybutton.style.display = "block";
+		  } else {
+			mybutton.style.display = "none";
+		  }
+		}
+
+		function topFunction() {
+		  document.body.scrollTop = 0; 
+		  document.documentElement.scrollTop = 0; 
+		}
+        function copy_func(){
+            var url = window.location.href;
+            navigator.clipboard.writeText(url);
+            document.getElementById("success-msg").innerHTML="<span style='color:green; margin:10px;'>Url Copied to Clipboard!</span>";
+        }
+		</script>
+    </body>
+    </html>

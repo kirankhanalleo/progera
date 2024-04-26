@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ternary Operators in C - Progera.com</title>
+    <!---Importing Stylsheets-->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!---IMPORTING GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Benne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ceviche+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <!---IMPORTING FONTAWESOME ICONS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!--Bootstrap JS-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!--Navigation Start-->
+    <header>
+        <nav id="header-nav" class="navbar navbar-expand-lg navbar-light sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <h1>ProgEra</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div id="navitems" class="navbar-nav">
+                        <a class="nav-item nav-link" href="../c-programming.html">C Program</a>
+                        <a class="nav-item nav-link" href="../java-programming.html">Java</a>
+                        <a class="nav-item nav-link" href="../python-programming.html">Python</a>
+                        <a class="nav-item nav-link" href="../html.html">HTML</a>
+                        <a class="nav-item nav-link" href="../css.html">CSS</a>
+                        <a class="nav-item nav-link" href="../javascript.html">JavaScript</a>
+                        <a class="nav-item nav-link" href="../php.html">Php</a>
+                        <a class="nav-item nav-link" href="../my-sql.html">My SQL</a>
+                        <a class="nav-item nav-link" href="../web-apps.html">Web Apps</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div id="contents">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="c-nav">
+                    <h3>Quick Navigation</h3>
+                    <a href="../c-programming.html#c-basics"><i class="fas fa-angle-double-right"></i> C-Basics</a>
+                    <a href="../c-programming.html#operators"><i class="fas fa-angle-double-right"></i> Operators</a>
+                    <a href="../c-programming.html#conditional-statements"><i class="fas fa-angle-double-right"></i>
+                        Conditional Statements</a>
+                    <a href="../c-programming.html#loops"><i class="fas fa-angle-double-right"></i> Loops</a>
+                    <a href="../c-programming.html#arrays"><i class="fas fa-angle-double-right"></i> Arrays</a>
+                    <a href="../c-programming.html#pointers"><i class="fas fa-angle-double-right"></i> Pointers</a>
+                    <a href="../c-programming.html#structures"><i class="fas fa-angle-double-right"></i> Structures and
+                        Unions</a>
+                    <a href="../c-programming.html#functions"><i class="fas fa-angle-double-right"></i> Functions and
+                        Recursion</a>
+                    <a href="../c-programming.html#file-handling"><i class="fas fa-angle-double-right"></i> File
+                        Handling</a>
+                </div>
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-8 col-md-6 col-sm-12">
+                <h3>C Ternary (?:) Operators </h3>
+                <p class="para-contents">Ternary operators are those operators that takes three operands. It is
+                    also known as conditional operator and is represented by ?:
+                </p> 
+                <img src="./pictures/ternaryoperator.png" class="content-img" alt="ternary-operator" title="ternary-operator-in-c">
+                <p class="para-contents">
+                    The ternary operator holds three expressions. The first expression is the condition and the next
+                    two expressions are statements. If the condition holds true, the first statement is executed.
+                    If the condition is false the second statement is executed.
+                </p>
+                <div class="code-area">
+                    <code class="comment">
+                        //c program to demonstrate ternary operator<br>
+                    </code>
+                    <code class="codes">
+                    <span class="link">#include</span> <span class="hd-file">&lt;stdio.h&gt;</span><br>
+                    <span class="var-type">int </span> main <span class="parenthesis">()</span><br>{<br>
+                    <pre><span class="codes">   <span class="var-type">int </span>x<span class="operator">=</span>10;</pre>
+                    <pre>   <span class="parenthesis">(</span>x<span class="operator">%</span>2<span class='operator'>==</span>0<span class="parenthesis">)</span> <span class="operator">?</span></pre>
+                    <pre>       printf("<span class="con-char">%d</span> is even",x); <span class="operator">:</span></pre>
+                    <pre>       printf("<span class="con-char">%d</span> is odd",x);</pre>
+                    <pre>    return 0;</pre>
+                    }
+                    </code>
+                </div>
+                <p class="para-contents">In the above example, the variable x has value 10. When 10 is divided by 2, the remainder is 0.
+                    This makes the condition true. Hence the first <i>printf</i> statement will be executed. 
+                </p>
+                <hr color="grey">
+                
+                <div class="btn-foot">
+                    <button class="btn-prev"><a href="binary-operator.html">Previous</a></button>
+                    <button class="btn-next"><a href="arithmetic-operator.html">Next</a></button>
+                </div>
+                <!--Recommendation Section Here-->
+                <div class="social-share">
+                    <h4>Share with friends :</h4>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.progera.com/
+                            c-programming/unary-operator.html" target="_blank" title="Share on Facebook"><i
+                            class="fa-brands fa-facebook-square"></i></a>
+                    <a href="https://twitter.com/intent/tweet?url=https://www.progera.com/
+                            c-programming/unary-operator.html" target="_blank" title="Share on Twitter"><i
+                            class="fa-brands fa-twitter-square"></i></a>
+                    <a href="https://twitter.com/intent/tweet?url=https://www.progera.com/
+                            c-programming/unary-operator.html" target="_blank" title="Share on Linkedin"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <button class="copy-btn" title="Copy to Clipboard " onclick="copy_func();">
+                        <i class="fa-regular fa-copy"></i>
+                    </button>
+                    <p id="success-msg"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <p class="copyright">Copyright © 2022, Progera.com | All Right Reserved</p>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"
+            aria-hidden="true"></i></button>
+    <script>
+        mybutton = document.getElementById("myBtn");
+
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+        function copy_func() {
+            var url = window.location.href;
+            navigator.clipboard.writeText(url);
+            document.getElementById("success-msg").innerHTML = "<span style='color:green; margin:10px;'>Url Copied to Clipboard!</span>";
+        }
+    </script>
+</body>
+
+</html>

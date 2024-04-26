@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProgEra - Learn Programming for Free</title>
+    <!---Importing Stylsheets-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/stylesheet.css">
+    <!---IMPORTING GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Benne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600&family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ceviche+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <!---IMPORTING FONTAWESOME ICONS-->
+    <script src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+</head>
+
+<body>
+    <!--Bootstrap JS-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!--Navigation Start-->
+    <section id="jumbotron">
+        <header>
+            <nav id="header-nav" class="navbar navbar-expand-lg navbar-light sticky-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">
+                        <h1>ProgEra</h1>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon">
+                        </span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div id="navitems" class="navbar-nav">
+                            <a class="nav-item nav-link" href="c-programming.html">C program</a>
+                            <a class="nav-item nav-link" href="#">Java</a>
+                            <a class="nav-item nav-link" href="#">Python</a>
+                            <a class="nav-item nav-link" href="#">HTML</a>
+                            <a class="nav-item nav-link" href="#">CSS</a>
+                            <a class="nav-item nav-link" href="#">Javascript</a>
+                            <a class="nav-item nav-link" href="#">PHP</a>
+                            <a class="nav-item nav-link" href="#">My sql</a>
+                            <a class="nav-item nav-link" href="#">Web apps</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div id="banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-sm-12 col-md-6 d-lg-block">
+                        <h3 class="signature">Learn Programming for Free</h3>
+                        <p class="intro-text">You have always heard you should LEARN to code but never knew WHY & HOW to
+                            code. Progera.com is here to help you learn coding real quick by developing core programming
+                            understanding and concepts using definition, tutorials and examples.</p>
+                        <form class="card card-sm">
+                            <div class="card-body row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <i class="fas fa-search h4 text-body"></i>
+                                </div>
+                                <div class="col">
+                                    <input class="form-control form-control-md form-control-borderless" type="search"
+                                        placeholder="Search topics or keywords">
+                                </div>
+                                <div class="col-auto">
+                                    <button class="btn btn-md btn-success" type="submit">Search</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-7 col-sm-12 col-md-6">
+                        <div id="banner-img"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="footer">
+                <p>Copyright &copy; <span id='date'></span>, <a href="index.html">Progera.com</a> | All Rights Reserved</p>
+            </div>
+    </section>
+    <script>
+        var d=new Date();
+        var year=d.getFullYear();
+        document.getElementById("date").innerHTML=year;
+    </script>
+</body>
+</html>
